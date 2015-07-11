@@ -1,5 +1,6 @@
 {
     "name": "voaddit-api",
+    "main": "lib/index.js",
     "version": "0.0.1",
     "description": "voaddit-api",
     "author": "Shaheen Page <shaheenspage@gmail.com>",
@@ -16,7 +17,7 @@
         "mocha": "./node_modules/mocha/bin/mocha",
         "test": "./node_modules/jscs/bin/jscs . && node scripts/test",
         "prestart": "npm install",
-        "start": "node lib | ./node_modules/bunyan/bin/bunyan"
+        "start": "node . | ./node_modules/bunyan/bin/bunyan"
     },
     "homepage": "https://github.com/shaheenp/voaddit-api",
     "repository": {
