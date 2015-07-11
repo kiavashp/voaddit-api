@@ -1,0 +1,44 @@
+{
+    "name": "voaddit-api",
+    "version": "0.0.1",
+    "description": "voaddit-api",
+    "author": "Shaheen Page <shaheenspage@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "clear-logs": "rm ./logs/*",
+        "db-schema": "node scripts/db schema | ./node_modules/bunyan/bin/bunyan",
+        "db-truncate": "node scripts/db truncate | ./node_modules/bunyan/bin/bunyan",
+        "db-test": "node scripts/db test | ./node_modules/bunyan/bin/bunyan",
+        "db-dev": "node scripts/db dev | ./node_modules/bunyan/bin/bunyan",
+        "env-test": "npm run db-schema && npm run db-test",
+        "env-dev": "npm run db-schema && npm run db-dev",
+        "pretest": "npm install && npm run env-test",
+        "mocha": "./node_modules/mocha/bin/mocha",
+        "test": "./node_modules/jscs/bin/jscs . && node scripts/test",
+        "prestart": "npm install",
+        "start": "node lib | ./node_modules/bunyan/bin/bunyan"
+    },
+    "homepage": "https://github.com/shaheenp/voaddit-api",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/shaheenp/voaddit-api"
+    },
+    "bugs": {
+        "url": "https://github.com/shaheenp/voaddit-api/issues"
+    },
+    "dependencies": {
+        "boom": "^2.7.1",
+        "bunyan": "^1.4.0",
+        "hapi": "^8.5.1",
+        "hoek": "^2.14.0",
+        "joi": "^6.4.1",
+        "mysql": "^2.6.2"
+    },
+    "devDependencies": {
+        "istanbul": "^0.3.17",
+        "jscs": "^1.13.1",
+        "mocha": "^2.2.5",
+        "npm": "^2.12.1",
+        "should": "^7.0.2"
+    }
+}
